@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Brigt-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desa-urated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--Pale-blue);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    height: calc(100vh - 1px);
+    background: url(/images/pattern-background-desktop.svg), var(--Pale-blue);
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+ul{
+    list-style: none;
+} 
+.image img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    height: 180px;
+}
+
+.cover{
+    max-width: 100%;
+    object-fit: cover;
+}
+main{
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 5%;
+} 
+
+.container{
+    width: 380px;
+    box-shadow: 5px 5px 5px rgb(0,0,0,.1);
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+.para{
+    text-align: center;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    color: var(--Desa-urated-blue);
+    font-size: 16px;
+}
+
+.plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Very-pale-blue);
+    border-radius: .7rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 2rem;
+    margin-top: 1.5rem;
+}
+
+.price{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 50px;
+    line-height: 25px;
+    margin:  21px 22px;
+    margin-left: -50px;
+    font-size: 15px;
+}
+.anual_price{
+    
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+.price-yr{
+    color: var(--Desa-urated-blue);
+    font-weight: 500;
+    
+}
+
+.change a{
+    font-size: 14px;
+    color: var(--Brigt-blue);
+    font-weight: 900;
+    transition: .3s ease-in-out;
+}
+.change a:hover{
+    color: #766CF1;
+    text-decoration: none;
+}
+.button{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2.5rem;
+}
+.pay a{
+    color: white;
+    text-decoration: none;
+}
+.pay {
+    width: 100%;
+    background-color: var(--Brigt-blue);
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    border-radius: .6rem;
+    font-weight: 600;
+    box-shadow: 0 16px 30px #cdc7ff;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+.pay:hover{
+    background-color: #766CF1;
+}
+
+.cancel{
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 900;
+    color: var(--Desa-urated-blue);
+    transition: .3s ease-in-out;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+.cancel:hover{
+    color: var(--Dark-blue)
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Dark-blue);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.attribution a {
+     color: var(--Brigt-blue);
+}
+
+
+
+@media (max-width: 390px){
+    
+    body{
+        background: url(/images/pattern-background-mobile.svg) no-repeat;
+        background-color: var(--Pale-blue);
+        min-width:100% ;
+    }
+
+    .container{
+        width: 350px;
+    }
+    .image img{
+        height: 170px;
+        width: 100%;
+    }
+    .plan{
+        height: 80px;
+        margin:  21px 22px;
+    }
+    .price{
+        font-size: 14px;
+        margin-left: -40px;
+        line-height: 23px
+    }
+    .button {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
